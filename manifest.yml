@@ -1,0 +1,5 @@
+---
+applications:
+ - name: CogntiveLabsChatbotAPI
+   random-route: true
+   memory: 128M
