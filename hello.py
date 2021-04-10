@@ -1,16 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import json
-from ibm_watson import AssistantV2
 
 app = Flask(__name__, static_url_path='')
 
 # configuração para CloudFoundry IBM
 port = int(os.getenv('PORT', 8000))
 
+@app.route('/dados', methods=['GET', 'POST'])
+def dados():         
+    return "<h1>Outro endpoint</h1>"
+
 @app.route('/')
-def home():     
-    
+def home():         
     return "<h1>Olá Flask!</h1>"
 
 
